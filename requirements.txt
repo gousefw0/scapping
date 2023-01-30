@@ -1,6 +1,5 @@
 Flask
 Gunicorn
-json
 bs4
 time
 selenium
