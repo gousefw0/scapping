@@ -10,7 +10,7 @@ options.add_argument('--disable-blink-features=AutomationControlled')
 app = Flask(__name__)
 ###########################
 from markupsafe import escape
-@app.route("/<stock>")
+@app.route("/stock/<stock>")
 def home(stock):
     stkName = stock
     url = 'https://www.tradingview.com/symbols/EGX-' + stkName + '/'
@@ -36,6 +36,10 @@ def home(stock):
     # priceToEarning = soup.find('div',{'class' : 'js-symbol-pe'}).text
     my_stock_data['price_to_earning'] = soup.find('div',{'class' : 'js-symbol-pe'}).text
     return jsonify(my_stock_data)
+@app.route("/")
+def home():
+    data = {'page':'home page','message':'ok'}
+    return jsonify(data)
 
 ###########################
 app.run()
