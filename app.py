@@ -11,7 +11,7 @@ app = Flask(__name__)
 ###########################
 from markupsafe import escape
 @app.route("/stock/<stock>")
-def home(stock):
+def stocks(stock):
     stkName = stock
     url = 'https://www.tradingview.com/symbols/EGX-' + stkName + '/'
     driver = webdriver.Chrome(ChromeDriverManager().install())
