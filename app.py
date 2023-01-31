@@ -5,7 +5,6 @@ from time import sleep
 import requests
 app = Flask(__name__)
 ###########################
-from markupsafe import escape
 @app.route("/stock/<stock>")
 def stock(stock):
         url = 'https://english.mubasher.info/markets/EGX/stocks/' + stock + '/'
