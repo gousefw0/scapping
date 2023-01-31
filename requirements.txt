@@ -1,5 +1,4 @@
 Flask
 Gunicorn
 bs4
-selenium
-webdriver_manager
+requests
