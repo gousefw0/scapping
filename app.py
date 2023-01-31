@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 from time import sleep
 import requests
 app = Flask(__name__)
+from markupsafe import escape
 ###########################
 @app.route("/stock/<stock>")
 def stock(stock):
