@@ -3,3 +3,5 @@ Gunicorn
 bs4
 requests
 markupsafe
+lxml
+html5lib
