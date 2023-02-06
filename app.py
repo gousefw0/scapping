@@ -13,7 +13,13 @@ def stock(stock):
         src = result.content
         soup = BeautifulSoup(src,'lxml')
         my_stock_data = {}
-        my_stock_data['stock_price'] =soup.find('div',{'class' : 'market-summary__last-price'}).text
+        price=soup.find('div',{'class' : 'market-summary__last-price'}).text
+        my_stock_data["price"]=price
+        if price=="0.00" :
+                price=soup.find_all('div',{'class' : 'market-summary__block-row'})
+                price=price[1].find('span',{'class':"market-summary__block-number"}).text
+                my_stock_data["price"]=price
+        
         url='https://www.mubasher.info/markets/EGX/stocks/'+stock+'/profile'
         result = requests.get(url)
         src = result.content
