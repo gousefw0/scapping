@@ -6,3 +6,4 @@ markupsafe
 lxml
 html5lib
 selenium 
+ webdriver_manager.chrome
