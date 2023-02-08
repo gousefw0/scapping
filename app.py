@@ -1,9 +1,11 @@
 from flask import Flask,jsonify,request
 import json
 from bs4 import BeautifulSoup
+from flask_cors import CORS
 from time import sleep
 import requests
 app = Flask(__name__)
+CORS(app)
 ###########################
 from markupsafe import escape
 @app.route("/stock/<stock>")
@@ -57,4 +59,4 @@ def home():
     data = {'page':'home page','message':'ok'}
     return jsonify(data)
 ###########################
-app.run(debug=False,host='0.0.0.0')
+app.run()
