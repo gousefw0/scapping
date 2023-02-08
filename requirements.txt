@@ -5,3 +5,5 @@ requests
 markupsafe
 lxml
 html5lib
+cors
+flask_cors
