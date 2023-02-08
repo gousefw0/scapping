@@ -59,4 +59,4 @@ def home():
     data = {'page':'home page','message':'ok'}
     return jsonify(data)
 ###########################
-app.run()
+app.run(debug=False,host='0.0.0.0')
