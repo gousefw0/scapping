@@ -333,6 +333,7 @@ def stock(stock,a):
         tv = TvDatafeed(username=username,password=password)
         df=tv.get_hist(stock,'EGX',n_bars=a)
         df.reset_index(level=None, drop=False, inplace=True, col_level=0, col_fill='')
+        df['datetime']=df['datetime'].dt.strftime('%Y-%m-%d')
         result = df.to_json(orient="split")
         parsed = loads(result)
         dumps(parsed, indent=4)  
