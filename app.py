@@ -326,7 +326,7 @@ if __name__ == "__main__":
     )
 ###########################
 from markupsafe import escape
-@app.route("/stock/<stock>/<int:a>'")
+@app.route("/stock/<stock>/<int:a>")
 def stock(stock,a):
         username = 'yousef014'
         password = 'yosef@123'
