@@ -8,4 +8,4 @@ html5lib
 cors
 flask_cors
 pandas
-tvDatafeed
+--upgrade --no-cache-dir git+https://github.com/StreamAlpha/tvdatafeed.git
