@@ -7,3 +7,5 @@ lxml
 html5lib
 cors
 flask_cors
+pandas 
+tvDatafeed
