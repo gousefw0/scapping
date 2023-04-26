@@ -326,12 +326,12 @@ if __name__ == "__main__":
     )
 ###########################
 from markupsafe import escape
-@app.route("/stock/<stock>")
-def stock(stock):
+@app.route("/stock/<stock>/<int:a>'")
+def stock(stock,a):
         username = 'yousef014'
         password = 'yosef@123'
         tv = TvDatafeed(username=username,password=password)
-        df=tv.get_hist(stock,'EGX',)
+        df=tv.get_hist(stock,'EGX',n_bars=a)
         result = df.to_json(orient="split")
         parsed = loads(result)
         dumps(parsed, indent=4)  
